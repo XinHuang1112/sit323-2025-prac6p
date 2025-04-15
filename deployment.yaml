@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sit323-prac5p-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sit323-prac5p
+  template:
+    metadata:
+      labels:
+        app: sit323-prac5p
+    spec:
+      containers:
+      - name: sit323-prac5p
+        image: xinhuang1997/sit323-prac5p
+        ports:
+        - containerPort: 3000
